@@ -1,7 +1,7 @@
 # valueLabs
 
 1.git clone https://github.com/your-username/your-repo-name.git
-2.cd your-repo-name
+2.cd repo_name
 
 3.We have provided a .env file in the root directory.
 Edit the values as per your local MySQL setup:
