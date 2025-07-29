@@ -1,8 +1,8 @@
 package main
 
 import (
-	"valueLabs/controllers"
 	"valueLabs/database"
+	"valueLabs/routes"
 
 	"github.com/gin-gonic/gin"
 )
@@ -10,10 +10,6 @@ import (
 func main() {
 	database.InitDB()
 	r := gin.Default()
-
-	r.POST("/accounts", controllers.CreateAccount)
-	r.GET("/accounts/:account_id", controllers.GetAccount)
-	r.POST("/transactions", controllers.CreateTransaction)
-
+	routes.RegisterRoutes(r)
 	r.Run(":8080")
 }
